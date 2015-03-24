@@ -8,7 +8,7 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : davidfergon's blog
+title : davidfergon
 author :
   name : David Fernández González
   email : david.fernan.gonza@gmail.com
