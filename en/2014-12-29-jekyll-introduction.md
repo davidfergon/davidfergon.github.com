@@ -2,8 +2,11 @@
 layout: post
 category : lessons
 tagline: "Supporting tagline"
+title: Jekyll Introduction
 tags : [intro, beginner, jekyll, tutorial]
 comments : true
+language : en
+date: "2014-12-29"
 ---
 {% include JB/setup %}
 

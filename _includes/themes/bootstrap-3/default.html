@@ -63,6 +63,7 @@
   <body>
 
     <div id="wrap">
+
       <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -72,7 +73,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          {% if page.language == 'es' %}
+            <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          {% endif %}
+          {% if page.language == 'en' %}
+            {% assign url = page.url | split: '/en' %}
+            <a class="navbar-brand" href="{{ url[0] | append: '/en' }}">{{ site.title }}</a>
+          {% endif %}
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,10 +87,16 @@
           <ul class="nav navbar-nav">
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
-          <!-- Enlaces en la cabecera
             {% include JB/pages_list %}
-          -->
+            {% if page.language == 'es' %}
+            <li><a href="en/{{ page.url }}" class="align=left"> English version</a></li>
+            {% endif %}
+            {% if page.language == 'en' %}
+            <li><a href="{{ page.url | remove: "en/" }}">Versión en castellano</a></li>
+            {% endif %}
+
           </ul>
+
 
 <!--  Quito el buscador porque es un fake
 
@@ -96,7 +109,38 @@
 -->          
         </div><!-- /.navbar-collapse -->
       </nav>
-        
+
+      <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <img src="/images/profile.jpg" class="img-responsive img-thumbnail" alt="My profile image">
+          </div>
+          <div class="my_paragraph">
+            <p>
+              {{ site.author.name }}
+            </p>
+            <p>
+              <a href="mailto:{{ site.author.email }}" class="btn btn-info btn-xs"><i class="fa fa-envelope-o fa-2x"></i></a>
+              {{ site.author.email }}
+            </p>              
+            <p>
+              <a href="http://linkedin.com/in/{{ site.author.linkedin }}" class="btn btn-info btn-xs"><i class="fa fa-linkedin-square fa-2x"></i></a>
+              http://linkedin.com/in/{{ site.author.linkedin }}
+            </p>              
+            <p>
+              <a href="http://twitter.com/in/{{ site.author.twitter }}" class="btn 
+              btn-info btn-xs"><i class="fa fa-twitter-square fa-2x"></i></a>
+              @{{ site.author.twitter }}
+            </p>
+            <p>
+              <a href="https://github.com/{{ site.author.github }}" class="btn 
+              btn-info btn-xs"><i class="fa fa-github-square fa-2x"></i></a>
+              {{ site.author.github }}
+            </p>
+          </div>
+        </nav>
+      </div>
+
       <div class="container">
         {{ content }}
       </div>

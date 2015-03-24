@@ -82,7 +82,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : agilismoutopico
+      short_name : davidfergon
     livefyre :
       site_id : 123
     intensedebate :
@@ -128,3 +128,6 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
   
+#paginate: 5
+#paginate_path: /page:num/
+
