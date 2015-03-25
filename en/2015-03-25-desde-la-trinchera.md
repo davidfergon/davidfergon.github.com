@@ -10,6 +10,8 @@ date: "2015-03-25"
 ---
 {% include JB/setup %}
 
+# Sorry, English Translation Pending
+
 Suena el despertador. El oído se despierta abruptamente. Luego enciendes la luz y tu vista es la que se ve afectada. Sucesivamente todos tus sentidos se desperezan de una noche más corta de lo normal.
 
 Es lunes, y tras el fin de semana toca volver a la rutina en la oficina. Pero tu oficina, como la de muchos otros no es una siempre oficina con mesas, sillas y ordenadores. Tu oficina es un campo de batalla, repleta de minas anti-persona, de aliados, de enemigos, de sargentos ineptos, de reclutas patosos, de héroes que a diario tratan de librar su propia guerra.
