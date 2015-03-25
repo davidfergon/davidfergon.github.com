@@ -21,6 +21,9 @@
     <!-- Custom styles -->
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
+    <!-- Para los iconos -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -88,17 +91,10 @@
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
-            {% if page.language == 'es' %}
-            <li><a href="en/{{ page.url }}" class="align=left"> English version</a></li>
-            {% endif %}
-            {% if page.language == 'en' %}
-            <li><a href="{{ page.url | remove: "en/" }}">Versión en castellano</a></li>
-            {% endif %}
-
           </ul>
 
 
-<!--  Quito el buscador porque es un fake
+<!--  Quito el buscador porque es un fake 
 
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
@@ -106,7 +102,19 @@
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
--->          
+-->
+
+          {% if page.language == 'es' %}
+            <form class="navbar-form navbar-right" action="en/{{ page.url }}">
+                <input type="image" alt="Go to English version" title="Go to English version" src="../images/uk.png" />
+            </form>
+          {% endif %}
+          {% if page.language == 'en' %}
+            <form class="navbar-form navbar-right" action="{{ page.url | remove: "en/" }}">
+                <input type="image" alt="Ir a la versión en castellano" title="Ir a la versión en castellano" src="../../images/spain.png" />
+            </form>
+          {% endif %}
+
         </div><!-- /.navbar-collapse -->
       </nav>
 
@@ -124,17 +132,17 @@
               {{ site.author.email }}
             </p>              
             <p>
-              <a href="http://linkedin.com/in/{{ site.author.linkedin }}" class="btn btn-info btn-xs"><i class="fa fa-linkedin-square fa-2x"></i></a>
+              <a href="http://linkedin.com/in/{{ site.author.linkedin }}" class="btn btn-info btn-xs" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
               http://linkedin.com/in/{{ site.author.linkedin }}
             </p>              
             <p>
               <a href="http://twitter.com/{{ site.author.twitter }}" class="btn 
-              btn-info btn-xs"><i class="fa fa-twitter-square fa-2x"></i></a>
+              btn-info btn-xs" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
               @{{ site.author.twitter }}
             </p>
             <p>
               <a href="http://github.com/{{ site.author.github }}" class="btn 
-              btn-info btn-xs"><i class="fa fa-github-square fa-2x"></i></a>
+              btn-info btn-xs" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
               {{ site.author.github }}
             </p>
           </div>

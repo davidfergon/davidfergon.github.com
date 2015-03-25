@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blog de davidfergon
-tagline: Listado de entradas
+tagline: Entradas recientes
 language: es
 ---
 <!--
@@ -13,7 +13,7 @@ language: es
 -->
 
 <ul class="posts">
-  {% for post in site.pages %}
+  {% for post in site.pages reversed %}
     {% if post.language == page.language and post.layout == 'post' %}
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       <p class="author">

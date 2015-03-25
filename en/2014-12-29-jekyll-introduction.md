@@ -1,5 +1,4 @@
 ---
-layout: post
 category : lessons
 tagline: "Supporting tagline"
 title: Jekyll Introduction

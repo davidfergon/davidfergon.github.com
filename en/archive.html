@@ -1,0 +1,48 @@
+---
+layout: page
+title : Post's History
+header : Post's History
+group: navigation
+language: en
+---
+{% include JB/setup %}
+
+<!--
+{% assign posts_collate = site.posts %}
+{% include JB/posts_collate %}
+-->
+
+{% assign first_post = true %}
+{% for post in site.pages reversed %}
+	{% if post.language == page.language and post.layout == 'post' %}
+
+	    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+	    {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+
+		{% if first_post == true %}
+		  <h2>{{this_year}}</h2>
+	      <h3>{{this_month}}</h3>
+	      <ul>
+	    {% else %}  
+	      {% if this_year != next_year %}
+	        </ul>
+	        <h2>{{this_year}}</h2>
+	        <h3>{{this_month}}</h3>
+	        <ul>
+	      {% else %}    
+	        {% if this_month != next_month %}
+	          </ul>
+	          <h3>{{this_month}}</h3>
+	          <ul>
+	        {% endif %}
+	      {% endif %}
+	    {% endif %}
+	  
+	    {% assign first_post = false %}
+	  	{% assign next_year = this_year %}
+	  	{% assign next_month = this_month %}
+	    <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> &raquo; <span> posted on {{ post.date | date: "%B %e, %Y" }}</span></li>
+	  
+	{% endif %}
+{% endfor %}
+</ul>
