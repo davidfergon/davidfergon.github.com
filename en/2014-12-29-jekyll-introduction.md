@@ -1,6 +1,6 @@
 ---
 category : lessons
-tagline: "Supporting tagline"
+tagline: 
 title: Jekyll Introduction
 tags : [intro, beginner, jekyll, tutorial]
 comments : true

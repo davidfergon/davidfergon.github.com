@@ -1,12 +1,12 @@
 ---
 layout: post
-category : lessons
-tagline: "Supporting tagline"
+tagline: 
 title: Desde la trinchera (Bienvenida al blog)
-tags : [wellcome, bienvenida]
+tags : [welcome, bienvenida]
 comments : true
 language : es
 date: "2015-03-25"
+english_url: "2015-03-25-from-the-trenches.html"
 ---
 {% include JB/setup %}
 
