@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -106,12 +107,12 @@
 
           {% if page.language == 'es' %}
             <form class="navbar-form navbar-right" action="en/{{ page.english_url }}">
-                <input type="image" alt="Go to English version" title="en/{{ page.english_url }}" src="../images/uk.png" />
+                Idioma: Es <input type="submit" value="En" alt="Go to English version" title="Go to English version" />
             </form>
           {% endif %}
           {% if page.language == 'en' %}
             <form class="navbar-form navbar-right" action="/{{ page.spanish_url | remove: "en/" }}">
-                <input type="image" alt="Ir a la versión en castellano" title="{{ page.spanish_url | remove: "en/" }}" src="../../images/spain.png" />
+                Language: <input type="submit" value="Es" alt="Ir a la versión en castellano" title="Ir a la versión en castellano" /> En
             </form>
           {% endif %}
 
@@ -164,6 +165,23 @@
       </div>
     </div>
 
+    <!-- cookies message -->
+    <div id="overbox3">
+        <div id="infobox3">
+          {% if page.language == 'es' %}
+            <p>Esta web utiliza cookies para obtener datos estadísticos de la navegación de sus usuarios. Si continúas navegando consideramos que aceptas su uso.
+            <a href="politica-privacidad.html">Más información</a>
+            <a onclick="aceptar_cookies();" style="cursor:pointer;">X Cerrar</a></p>
+          {% endif %}
+          {% if page.language == 'en' %}
+            <p>This website uses cookies to obtain statistical data navigation of. Browsing the site you accept the use. 
+            <a href="politica-privacidad.html">More information</a>
+            <a onclick="aceptar_cookies();" style="cursor:pointer;">X Close</a></p>
+          {% endif %}
+        </div>
+    </div>
+    <!-- END cookies message -->
+
     {% include JB/analytics %}
 
 
@@ -171,5 +189,53 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- For cookies message -->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/cookies.js" type="text/javascript"></script>
+
+    <script>
+    function GetCookie(name) {
+        var arg=name+"=";
+        var alen=arg.length;
+        var clen=document.cookie.length;
+        var i=0;
+     
+        while (i<clen) {
+            var j=i+alen;
+     
+            if (document.cookie.substring(i,j)==arg)
+                return "1";
+            i=document.cookie.indexOf(" ",i)+1;
+            if (i==0)
+                break;
+        }
+     
+        return null;
+    }
+     
+    function aceptar_cookies(){
+        var expire=new Date();
+        expire=new Date(expire.getTime()+7776000000);
+        document.cookie="cookies_surestao=aceptada; expires="+expire;
+     
+        var visit=GetCookie("cookies_surestao");
+     
+        if (visit==1){
+            popbox3();
+        }
+    }
+     
+    $(function() {
+        var visit=GetCookie("cookies_surestao");
+        if (visit==1){ popbox3(); }
+    });
+     
+    function popbox3() {
+        $('#overbox3').toggle();
+    }
+    </script>
+
+    <!-- END For cookies message -->
   </body>
 </html>
