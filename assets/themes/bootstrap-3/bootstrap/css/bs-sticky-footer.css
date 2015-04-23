@@ -47,11 +47,12 @@ body {
     width: 100%;
     text-align:center;
     background-color: #111111;
+    color: white;
 }
 #infobox3 p {
-    line-height:58px;
     font-size:12px;
     text-align:center;
+    margin-bottom:0
 }
 #infobox3 p a {
     margin-right:5px;

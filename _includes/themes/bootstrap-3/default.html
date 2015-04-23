@@ -62,10 +62,8 @@
   })();
 //]]>
 </script>
+
   </head>
-
-  <body>
-
     <div id="wrap">
 
       <nav class="navbar navbar-default" role="navigation">
@@ -118,38 +116,7 @@
 
         </div><!-- /.navbar-collapse -->
       </nav>
-<!--
-      <div class="container">
-        <nav class="navbar navbar-default" role="navigation">
-          <div class="navbar-header">
-            <img src="/images/profile.jpg" class="img-responsive img-thumbnail" alt="David Fernández González" title ="David Fernández González">
-          </div>
-          <div class="my_paragraph">
-            <p>
-              {{ site.author.name }}
-            </p>
-            <p>
-              <a href="mailto:{{ site.author.email }}" class="btn btn-info btn-xs"><i class="fa fa-envelope-o fa-2x"></i></a>
-              {{ site.author.email }}
-            </p>              
-            <p>
-              <a href="http://linkedin.com/in/{{ site.author.linkedin }}" class="btn btn-info btn-xs" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
-              http://linkedin.com/in/{{ site.author.linkedin }}
-            </p>              
-            <p>
-              <a href="http://twitter.com/{{ site.author.twitter }}" class="btn 
-              btn-info btn-xs" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
-              @{{ site.author.twitter }}
-            </p>
-            <p>
-              <a href="http://github.com/{{ site.author.github }}" class="btn 
-              btn-info btn-xs" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
-              {{ site.author.github }}
-            </p>
-          </div>
-        </nav>
-      </div>
--->
+
       <div class="container">
         {{ content }}
       </div>
@@ -170,12 +137,12 @@
         <div id="infobox3">
           {% if page.language == 'es' %}
             <p>Esta web utiliza cookies para obtener datos estadísticos de la navegación de sus usuarios. Si continúas navegando consideramos que aceptas su uso.
-            <a href="politica-privacidad.html">Más información</a>
+            <a href="cookies.html">Más información</a>
             <a onclick="aceptar_cookies();" style="cursor:pointer;">X Cerrar</a></p>
           {% endif %}
           {% if page.language == 'en' %}
             <p>This website uses cookies to obtain statistical data navigation of. Browsing the site you accept the use. 
-            <a href="politica-privacidad.html">More information</a>
+            <a href="cookies.html">More information</a>
             <a onclick="aceptar_cookies();" style="cursor:pointer;">X Close</a></p>
           {% endif %}
         </div>
@@ -192,7 +159,7 @@
 
     <!-- For cookies message -->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="js/cookies.js" type="text/javascript"></script>
+    <!--<script src="js/cookies.js" type="text/javascript"></script>-->
 
     <script>
     function GetCookie(name) {
