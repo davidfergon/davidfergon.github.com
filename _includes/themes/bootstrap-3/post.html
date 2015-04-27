@@ -15,8 +15,6 @@
 
 <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='16314949'></div>
 
-
-
   {% unless page.categories == empty %}
     <ul class="tag_box inline">
       <li><i class="glyphicon glyphicon-open"></i></li>
@@ -33,6 +31,7 @@
     </ul>
   {% endunless %}  
   
+  <!--
     <hr>
     <ul class="pagination">
     {% if page.previous %}
@@ -40,7 +39,9 @@
     {% else %}
       <li class="prev disabled"><a>&larr; Previous</a></li>
     {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+  
+      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Posts</a></li>
+    
     {% if page.next %}
       <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
     {% else %}
@@ -48,6 +49,7 @@
     {% endif %}
     </ul>
     <hr>
+    -->
     {% include JB/comments %}
   </div>
 </div>
