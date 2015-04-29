@@ -105,12 +105,12 @@
 
           {% if page.language == 'es' %}
             <form class="navbar-form navbar-right" action="en/{{ page.english_url }}">
-                Idioma: Es <input type="submit" value="En" alt="Go to English version" title="Go to English version" />
+                Language: Es <input type="submit" value="En" alt="Go to English version" title="Go to English version" />
             </form>
           {% endif %}
           {% if page.language == 'en' %}
             <form class="navbar-form navbar-right" action="/{{ page.spanish_url | remove: "en/" }}">
-                Language: <input type="submit" value="Es" alt="Ir a la versión en castellano" title="Ir a la versión en castellano" /> En
+                Idioma: <input type="submit" value="Es" alt="Ir a la versión en castellano" title="Ir a la versión en castellano" /> En
             </form>
           {% endif %}
 
