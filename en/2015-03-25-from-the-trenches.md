@@ -10,6 +10,8 @@ spanish_url: "2015-03-25-desde-la-trinchera.html"
 ---
 {% include JB/setup %}
 
+_First of all, sorry for my English. Any correction is well received._
+
 The clock alarm rings. The ear is awakened abruptly. Then you turn the switch and your view is the one affected. All your senses wake up after a shorter night than normal.
 
 It's Monday and it's time tto come back to the grind at the office. But your office, like many others, is not always office with tables, chairs and computers. Your office is a battlefield, full of: landmines, allies, enemies, inept sergeants, clumsy recruits, heroes who daily try to fight his own war.

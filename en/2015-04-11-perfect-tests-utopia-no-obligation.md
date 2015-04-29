@@ -10,6 +10,8 @@ spanish_url: "2015-04-11-perfeccion-en-tests-automaticos-utopia-no-obligacion.ht
 ---
 {% include JB/setup %}
 
+_First of all, sorry for my English. Any correction is well received._
+
 Any company that generates a software product should devote their efforts to have the most refined [Continuous Delivery](http://en.wikipedia.org/wiki/Continuous_delivery) system possible. For this one word is key: `automation` ... but I leave the topic of automation for another moment, today I'm going to focus on the responsibility of the QA department and its duty to be demanding with the results of its automated tests . Let us start with a couple of premises for a more concrete example:
 
 * Using [Cucumber](https://cukes.info) for the definition / implementation of automated tests.
