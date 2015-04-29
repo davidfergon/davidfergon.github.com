@@ -6,7 +6,30 @@
   <div class="col-xs-12">
 
     <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span>
+
+{% if page.language == 'es' %}
+      <span>
+        {% assign m = page.date | date: "%-m" %}
+        {{ page.date | date: "%-d" }}
+        {% case m %}
+          {% when '1' %}Enero
+          {% when '2' %}Febrero
+          {% when '3' %}Marzo
+          {% when '4' %}Abril
+          {% when '5' %}Mayo
+          {% when '6' %}Junio
+          {% when '7' %}Julio
+          {% when '8' %}Agosto
+          {% when '9' %}Septiembre
+          {% when '10' %}Octubre
+          {% when '11' %}Noviembre
+          {% when '12' %}Diciembre
+        {% endcase %}
+        {{ page.date | date: "%Y" }}
+        </span>
+{% else %}        
+      <span>{{ page.date | date_to_long_string }}</span>   
+{% endif %}
     </div>
     <div class="content">
       {{ content }}
