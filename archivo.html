@@ -43,12 +43,42 @@ english_url: "archive.html"
 	      {% if this_year != next_year %}
 	        </ul>
 	        <h2>{{this_year}}</h2>
-	        <h3>{{this_month}}</h3>
+	        	      <h3>{% assign m = this_month | date: "%-m" %}
+				{% case m %}
+				  {% when '1' %}Enero
+				  {% when '2' %}Febrero
+				  {% when '3' %}Marzo
+				  {% when '4' %}Abril
+				  {% when '5' %}Mayo
+				  {% when '6' %}Junio
+				  {% when '7' %}Julio
+				  {% when '8' %}Agosto
+				  {% when '9' %}Septiembre
+				  {% when '10' %}Octubre
+				  {% when '11' %}Noviembre
+				  {% when '12' %}Diciembre
+				{% endcase %}
+			</h3>
 	        <ul>
 	      {% else %}    
 	        {% if this_month != next_month %}
 	          </ul>
-	          <h3>{{this_month}}</h3>
+	          	      <h3>{% assign m = this_month | date: "%-m" %}
+				{% case m %}
+				  {% when '1' %}Enero
+				  {% when '2' %}Febrero
+				  {% when '3' %}Marzo
+				  {% when '4' %}Abril
+				  {% when '5' %}Mayo
+				  {% when '6' %}Junio
+				  {% when '7' %}Julio
+				  {% when '8' %}Agosto
+				  {% when '9' %}Septiembre
+				  {% when '10' %}Octubre
+				  {% when '11' %}Noviembre
+				  {% when '12' %}Diciembre
+				{% endcase %}
+			</h3>
 	          <ul>
 	        {% endif %}
 	      {% endif %}
