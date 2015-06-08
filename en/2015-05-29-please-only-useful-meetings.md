@@ -48,13 +48,6 @@ We must be generous and productive. **Please only convene necessary meetings.**
 
 Unfortunately, almost all know cases of people who takes refuge in meetings to justify their work.
 
-These people, whom we will call "professional meetinger" can bring together a subset of the following features:
-
-* They are usually people with little knowledge in the company sector.
-* They want to be present at meetings, even technical meetings, although their poor knowledge make that they speak a little bit. And often, when they speak, make clear that their presence is counterproductive because they contribute in anything only they can generate noise.
-* Occasionally they take a nap at meetings (Lamentable, but true) and by level of shamelessness they can reach to sleep with impunity.
-* It is difficult to find them in their jobs (their chair and table), when they are not in a meeting, they are having coffee or strolling somewhere else in the office.
-
 However, if these _professional meetingers_ only make meetings themselves would not affect the rest of us. But it is not, the biggest problem is that this scar drags other because this type of people usually are also specialists in _meetnapings_. So we will end as we began, with the definition:
 
 ### Meetnaping

@@ -46,13 +46,6 @@ Hay que ser generosos y productivos. **Por favor, sólo convoca reuniones necesa
 
 Por desgracia, casi todos conocemos casos de gente que se escuda en reuniones para justificar su trabajo.
 
-Estas personas, a las que llamaremos "reunidores profesionales", pueden aglutinar un subconjunto de las siguientes características:
-
-* Suelen ser personas con escasos conocimientos en el sector laboral de la empresa.
-* En las reuniones técnicas quieren estar presentes, aunque su escasez de conocimientos hacen que hablen poco, y cuando hablan suelen dejar patente que su presencia es contraproducente porque no aportan nada, a lo sumo meten ruido.
-* De vez en cuando suelen dar alguna cabezada en las reuniones (Lamentable, pero cierto) y según su nivel de sirvengozonería pueden llegar a dormise con total impunidad.
-* Es complicado encontrarles en su puesto de trabajo, cuando no están en una reunión, están reunidos tomando el café o paseando por algún otro lugar de la oficina.
-
 De todos modos, si estos _reunidores profesionales_ sólo hicieran reuniones consigo mismos no afectarían al trabajo del resto de los mortales. Pero no es así, el mayor problema es que esa lacra arrastra a otros ya que los _reunidores profesionales_ suelen ser además especialistas en _reucuestros_, así que vamos a terminar como empezamos, con la definición:
 
 ### Reucuestro
